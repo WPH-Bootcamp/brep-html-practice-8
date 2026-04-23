@@ -25,11 +25,12 @@ console.log(total(1, 2, 3, 4, 5, 20, 40));
 
 // -. Shallow Copy
 {
-  const arr = [1, 2, 3];
-  console.log(arr);
-
+  const arr = [1, 2, 3, [1, 2]];
   const arrCopy = [...arr];
+
+  arrCopy[3][0] = 4;
   arrCopy.push(10);
+  console.log(arr);
   console.log(arrCopy);
 }
 
